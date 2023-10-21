@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="register.component.css">
+
+<form action="" class="registro">
+    <fieldset class="datos">
+        <legend>Registrarse</legend>
+
+        <div class="campo">
+            <label for="gmail">Gmail: </label>
+            <input type="email" id="gmail" name="gmail" formControlName="gmail" placeHolder="ejemplo@gmail.com" requiered> 
+        </div>
+
+        <div class="campo">
+            <label for="usuario">Usuario: </label>
+            <input type="text" id="usuario" name="usuario" formControlName="usuario" placeHolder="valennramirez22" requiered>
+        </div> 
+
+        <div class="campo">
+            <label for="contraseña">Contraseña: </label>
+            <input type="password" id="contraseña" name="contraseña" formControlName="contraseña" placeHolder="amoLasPelis222" required> 
+        </div>
+
+        <div class="campo">
+            <label for="c-contraseña">Confirmar contraseña: </label>
+            <input type="password" id="c-contraseña" name="c-contraseña" formControlName="contraseña" placeHolder="amoLasPelis222" required> 
+        </div>
+
+
+        <div class="campo">
+            <label for="cumpleaños">Fecha de cumpleaños: </label>
+            <input type="date" id="cumpleaños" name="cumpleaños"> 
+        </div>
+
+        <div class="campo">
+            <label for="genero">Genero: </label>
+            <input type="radio" id="g-femenino" name="g-femenino" value="Femenino"> 
+        </div>
+
+        <button id="inicio-sesion">Registrarse</button>
+   
+    </fieldset>
+</form>
