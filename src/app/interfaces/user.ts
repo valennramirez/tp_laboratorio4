@@ -6,16 +6,7 @@ export interface User {
     contraseña:string,
     id: number, 
     cumpleaños: Date,
-    genero: string
-}
-
-export interface Pelicula{
-    titulo: string, 
-    ratings: string, 
-    fecha: Date, 
-    sinopsis: string, 
-    director: string, 
-    duracion: string, 
-    reparto: string, 
-    idiomaOriginal: string
+    genero: string, 
+    listaVer: [], 
+    listaVistos: []
 }
