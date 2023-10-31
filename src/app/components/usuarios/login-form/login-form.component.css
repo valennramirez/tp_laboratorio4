@@ -2,17 +2,40 @@
     margin: 0 auto; 
     width: 60%; 
 }
+
+.datos legend{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FDB731;
+}
 .datos{
   text-align: center;
+  border-radius: 5px;
+border-color: rgb(38, 85, 216);
 }
-label{ 
-    position: relative; 
-}
-#inicio-sesion{
-    background-color: rgb(37, 37, 65);
+label{
+    color:  #BD0034; 
+    margin: 2%; 
+    font-style: oblique;
+    font-weight: 525;
+    position: relative;
 }
 
-button{
-    
+input{
+    background-color:#881b489c; 
     margin: 1%; 
+    width: 50%;
+    border-radius: 5px;
+    border-color:#840037a2; 
+}
+input[type="submit"]{
+    background-color:#8a0c40; 
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    opacity: 0.9;
+    color: white;
+    font-weight: 600;
+    width: 25%;
 }

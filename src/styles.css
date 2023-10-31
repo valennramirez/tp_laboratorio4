@@ -1,12 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 html{
-    background-color:rgb(6, 12, 33) ;
+    background-color: #030321 ;
     color: rgb(141, 144, 238); 
 }
 .navegacion{
-    background-color:  rgb(37, 37, 65);
     justify-content: right;
     display: flex;
     margin: .5 rem; 
 }
 
+p, 
+h1, 
+h2, 
+h3,
+h4, 
+text,
+label,
+a, 
+legend
+{
+    font-family: Helvetica;
+}

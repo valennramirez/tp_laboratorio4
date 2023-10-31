@@ -14,7 +14,7 @@
         <td>{{item.gmail}}</td>
         <td>{{item.usuario}}</td>
         <td><a href="" (click)="eliminarUsuario(item.id)">Eliminar</a></td>
-        <td><a href="" [routerLink]="['/editar', item.id]">Editar</a></td>
+        <td><a href="" routerLink="['/editar', item.id]">Editar</a></td>
     </tr>
 </tbody>
 </table>

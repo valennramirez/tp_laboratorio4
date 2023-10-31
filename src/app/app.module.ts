@@ -11,7 +11,6 @@ import { HomePagesComponent } from './pages/home-pages/home-pages.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { RegisterPagesComponent } from './pages/register-pages/register-pages.component';
-import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios/listar-usuarios.component';
 import { EditarClientesComponent } from './components/editar-clientes/editar-clientes/editar-clientes.component';
 import { EditarPageComponent } from './pages/editar-page/editar-page.component';
 import { ListarPeliculasComponent } from './components/peliculas/listar-peliculas/listar-peliculas.component';
@@ -29,7 +28,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     HomePagesComponent,
     LoginPageComponent,
     RegisterPagesComponent,
-    ListarUsuariosComponent,
     EditarClientesComponent,
     EditarPageComponent,
     ListarPeliculasComponent,
