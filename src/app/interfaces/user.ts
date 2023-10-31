@@ -3,8 +3,10 @@ export interface User {
     usuario:string, 
     nombre: string, 
     apellido: string, 
+    contraseña:string,
     id: number, 
-    cumpleaños: Date
+    cumpleaños: Date,
+    genero: string
 }
 
 export interface Pelicula{

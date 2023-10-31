@@ -1,0 +1,18 @@
+.formulario{
+    margin: 0 auto; 
+    width: 60%; 
+}
+.datos{
+  text-align: center;
+}
+label{ 
+    position: relative; 
+}
+#inicio-sesion{
+    background-color: rgb(37, 37, 65);
+}
+
+button{
+    
+    margin: 1%; 
+}

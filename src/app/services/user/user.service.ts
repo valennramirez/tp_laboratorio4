@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../interfaces/user.ts'; 
+import { User } from 'src/app/interfaces/user';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-   url = "url.com"; 
+   url: string = "http://localhost:3000/usuarios"; 
 
   constructor(private router: Router) {}; 
 
 
-  async getUsuario ()
+  async getUsuarios(): Promise <User[] | undefined>
   {
+
     try {
       const resultado = await fetch(this.url); 
       const listaUsuarios = await resultado.json();
@@ -21,12 +23,28 @@ export class UserService {
     } catch (error) {
       alert('Error...')
     }
+
+    return undefined; 
   }
 
-  async postUsuario(usuario: User)
+  async getUsuario(id: number)
+  {
+
+    try {
+      const resultado = await fetch(`${this.url}/${id}`); 
+      const usuario = await resultado.json();
+      return usuario; 
+    } catch (error) {
+      alert('Error al levantar el cliente')
+    }
+
+    return undefined; 
+  }
+
+   async postUsuario(usuario: User)
   {
     try{
-      const resultado= await fetch(this.url, 
+      await fetch(this.url, 
         {method: 'POST',
         body: JSON.stringify(usuario),
         headers: {'Content-type': 'application/json'}
@@ -41,15 +59,27 @@ export class UserService {
   async deleteUsuario (id: number)
   {
     try{
-      const resultado= await fetch(this.url, 
-        {method: 'DELETE', 
-        body:JSON.stringify(id), 
-        headers: {'Content-type': 'application/json'}
-      })
-      this.router.navigate(['home'])
+      await fetch(`${this.url}/${id}`, 
+        {method: 'DELETE'})
+      window.location.href="index.html"
     } catch(error)
     {
-      alert ("Usuario no existe"); 
+      alert ("El usuario no ha podido ser borrado "); 
     }
   }
+
+  async putUsuario(usuario: User)
+  {
+    try{
+      await fetch(`${this.url}/${usuario.id}`,
+        {method: 'PUT',
+        body: JSON.stringify(usuario),
+        headers: {'Content-type': 'application/json'}
+        })
+      this.router.navigate(['home'])
+    } catch (error)
+    {
+      console.log(error)
+    }
+}
 }
